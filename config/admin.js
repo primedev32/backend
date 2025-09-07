@@ -5,7 +5,6 @@ module.exports = ({ env }) => ({
   apiToken: {
     salt: env('API_TOKEN_SALT'),
   },
-  allowedHosts: ['primedev.pro', 'www.primedev.pro'],
   transfer: {
     token: {
       salt: env('TRANSFER_TOKEN_SALT'),

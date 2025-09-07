@@ -1,12 +1,14 @@
-const { mergeConfig } = require('vite');
+import { defineConfig, mergeConfig } from 'vite';
 
-module.exports = (config) => {
-  // Important: always return the modified config
-  return mergeConfig(config, {
+export default (config) => {
+  return mergeConfig(config, defineConfig({
     resolve: {
       alias: {
         '@': '/src',
       },
     },
-  });
+    server: {
+      allowedHosts: true
+    }
+  }));
 };
